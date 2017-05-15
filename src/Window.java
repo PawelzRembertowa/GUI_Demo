@@ -21,63 +21,12 @@ public class Window extends JFrame  {
 	private boolean loop = true;
 	private Icon icon;
 	
-	Window(){
-		setLayout(new FlowLayout());
-		icon = new ImageIcon("laughingKovi.gif");
-		image = new ImageIcon(getClass().getResource("kovi.gif"));
-		label = new JLabel (icon);
-		add(label);
-	}
+	
 		
 	public static void main(String[] args) {
 	
 		FirstWindow firstWindow = new FirstWindow();
 		
-		firstWindow.doLayout();
-		//Deprecated
-		//firstWindow.show();
-		
-//		
-//		File laugh = new File("laughingpart.wav");
-//		
-//
-//			
-//		for (int i=0; i<25; i++){
-//		playSound(laugh);	
-//		Window frame = new Window();
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		frame.setTitle("Kovi Virus U");
-//		Random r = new Random();
-//		int y = r.nextInt(950);
-//		int x = r.nextInt(1550);
-//		frame.setLocation(x, y);
-//		try {
-//			Thread.sleep(500);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		frame.pack();
-//		frame.setVisible(true);
-//		
-//		}
-//	}
-//		
-//
-//	public static synchronized void playSound(File Sound){
-//		new Thread(new Runnable(){
-//			public void run(){
-//		
-//		try {
-//			Clip clip = AudioSystem.getClip();
-//			AudioInputStream inputStream = AudioSystem.getAudioInputStream(Sound);
-//			clip.open(inputStream);
-//			clip.start();
-//		} catch (Exception e) {
-//			
-//			e.printStackTrace();
-//		}
-//	}
-//		}).start();
-}
+		firstWindow.doLayout();	
+	}
 }
