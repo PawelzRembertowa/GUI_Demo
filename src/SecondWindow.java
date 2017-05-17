@@ -23,7 +23,7 @@ public class SecondWindow extends JFrame {
 	SecondWindow(){
 		
 		//setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setTitle("Kovi Virus U");
 		Random r = new Random();
 		int y = r.nextInt(950);

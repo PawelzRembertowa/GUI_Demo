@@ -10,6 +10,7 @@ import java.awt.event.WindowListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -19,7 +20,7 @@ public class FirstWindow extends JFrame implements WindowListener,ActionListener
 	private JButton button1, button2;
 	private JPanel pane, pane1;
 	private TextField text, exitText;
-	
+	//public static FirstWindow firstWindow;
 	
 	//KONSTRUKTOR
 	public FirstWindow(){
@@ -54,28 +55,13 @@ public class FirstWindow extends JFrame implements WindowListener,ActionListener
 		if (buttonClick.getSource() == button1){
 		SecondWindow secondWindow = new SecondWindow();
 		secondWindow.attack();
+		this.setVisible(false);
+		//firstWindow.dispose();
 		} else {
 		
-			
-			JFrame goodDecision = new JFrame ("Exit");
-			goodDecision.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			goodDecision.setSize(200, 100);
-			goodDecision.setLocation(750, 500);
-			goodDecision.setLayout(new FlowLayout());
-			pane1 = new JPanel();
-			label1 = new JLabel("Dobra decyzja mate");
-			JTextField jtf = new JTextField();
-			pane1.add(jtf);
-			goodDecision.getContentPane().add(pane1);
-			goodDecision.setVisible(true);
-			
-			
-			try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			this.setVisible(false);
+				
+			JOptionPane.showMessageDialog(frame, "That was a good decision", "Exit window", JOptionPane.PLAIN_MESSAGE);
 			System.exit(0);
 		}
 	}
